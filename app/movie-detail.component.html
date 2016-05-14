@@ -1,0 +1,8 @@
+<div *ngIf="movie">
+  <h2>{{movie.name}}</h2>
+  <div>
+    <label>Description: </label>
+    <p>{{movie.description}}</p>
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
