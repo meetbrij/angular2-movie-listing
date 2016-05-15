@@ -108,7 +108,7 @@ export var MOVIES: Movie[] = [
     "genre": ['Romance'],
     "language": "Mandarin",
     "mpaaRating": {
-      "type" : "PG 13",
+      "type" : "PG13",
       "label": "Some Coarse Language"
     },
     "userRating": "3"
@@ -122,7 +122,7 @@ export var MOVIES: Movie[] = [
     "genre": ['Drama','Comedy'],
     "language": "Mandarin",
     "mpaaRating": {
-      "type" : "PG 13",
+      "type" : "PG13",
       "label": "Some Sexual Reference"
     },
     "userRating": "5"
@@ -136,7 +136,7 @@ export var MOVIES: Movie[] = [
     "genre": ['Horror'],
     "language": "English",
     "mpaaRating": {
-      "type" : "PG 13",
+      "type" : "PG13",
       "label": "Horror"
     },
     "userRating": "3"

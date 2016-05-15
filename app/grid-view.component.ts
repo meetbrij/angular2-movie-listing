@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router-deprecated';
+import { Router, RouteParams } from '@angular/router-deprecated';
 import { Movie } from './movie';
 import { MovieService } from './movie.service';
 
@@ -13,12 +13,28 @@ export class GridViewComponent implements OnInit {
 	
 	constructor(
 		private router: Router,
-		private movieService: MovieService
+		private movieService: MovieService,
+		private routeParams: RouteParams
 	) { }
 	
 	ngOnInit() {
-    	this.movieService.getMovies()
+		let selectedLanguage = this.routeParams.get('language');
+		let selectedAudience = this.routeParams.get('audience');
+		let selectedRating = this.routeParams.get('rating');
+		if(selectedLanguage) {
+			this.movieService.getMoviesByLanguage(selectedLanguage)
       		.then(movies => this.movies = movies);
+		} else if(selectedAudience) {
+			this.movieService.getMoviesByAudience(selectedAudience)
+      		.then(movies => this.movies = movies);
+		} else if(selectedRating) {
+			this.movieService.getMoviesByRating(selectedRating)
+      		.then(movies => this.movies = movies);
+		} else {
+			this.movieService.getMovies()
+      			.then(movies => this.movies = movies);
+		}
+    	
   	}
   	
   	gotoDetail(movie: Movie) {

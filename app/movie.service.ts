@@ -13,4 +13,22 @@ export class MovieService {
 	    movies => movies.filter(movie => movie.id === id)[0]
 	  );
 	}
+
+	getMoviesByLanguage(lang: string) {
+	  return Promise.resolve(MOVIES).then(
+	    movies => movies.filter(movie => movie.language === lang)
+	  );
+	}
+
+	getMoviesByAudience(audience: string) {
+	  return Promise.resolve(MOVIES).then(
+	    movies => movies.filter(movie => movie.mpaaRating.type === audience)
+	  );
+	}
+
+	getMoviesByRating(rating: string) {
+	  return Promise.resolve(MOVIES).then(
+	    movies => movies.filter(movie => movie.userRating === rating)
+	  );
+	}
 }

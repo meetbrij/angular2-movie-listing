@@ -1,3 +1,8 @@
 .grid-view .movie {
-	height: ;
+	height: 500px;
+	cursor: pointer;
+}
+
+.grid-view .movie img {
+	height: 70%;
 }

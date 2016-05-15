@@ -1,8 +1,26 @@
 <div *ngIf="movie">
-  <h2>{{movie.name}}</h2>
-  <div>
-    <label>Description: </label>
-    <p>{{movie.description}}</p>
-  </div>
-  <button (click)="goBack()">Back</button>
+	<div class="row">
+		<div class="col-md-8">
+			<h2>{{movie.name}}</h2>
+			<p>({{movie.mpaaRating.type}}: {{movie.mpaaRating.label}})</p>
+		</div>
+	</div>
+	<hr>
+  	<div class="row">
+		<div class="col-md-4">
+			<img src="{{movie.imgPath}}" />
+		</div>
+		<div class="col-md-8">
+			<h3>Details</h3>
+      		<p>Genre: {{movie.genre}}</p>
+      		<p>Language: {{movie.language}}</p>
+			<p>Duration: {{movie.duration}}</p>
+      		<p>User Rating: {{movie.userRating}}</p>
+			<hr>
+			<h3>Synopsis</h3>
+			<p>{{movie.description}}</p>
+  			<hr>
+  			<button (click)="goBack()">Back</button>
+		</div>
+	</div>
 </div>

@@ -1,6 +1,6 @@
 <h2>Popular Movies this month</h2>
 <div class="row grid-view">
-  <div *ngFor="let movie of movies" (click)="gotoDetail(movie)" class="col-md-4">
+  <div *ngFor="let movie of movies" (click)="gotoDetail(movie)" class="col-md-3">
     <div class="movie">
       <img src="{{movie.imgPath}}" />
       <h3>{{movie.name}}</h3>
