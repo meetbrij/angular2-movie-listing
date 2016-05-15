@@ -9,3 +9,12 @@ A Movie listing app that list movies in grid view. Clicking the thumbnail of a m
 
 clone repo and run the following commands
 `npm start`
+
+
+To Do 
+- Load movie data from JSON
+- Filter movie via genre
+- Edit movie details
+- Add movie
+- Delete movie
+- For movie rating use visual (stars) instead of numbers
