@@ -19,4 +19,5 @@ To Do
 - Add movie
 - Delete movie
 - For movie rating use visual (stars) instead of numbers
+- Add the option to add the movie to Favorites list
 - Integrate with lo-dash
