@@ -15,7 +15,6 @@ To Do
 - Create DB for movies in mongodb
 - Load movie data as a JSON using REST
 - Filter movie via genre
-- Edit movie details
 - Add movie
 - Delete movie
 - For movie rating use visual (stars) instead of numbers
