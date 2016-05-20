@@ -3,7 +3,7 @@ export class Movie {
 	name: string;
 	description: string;
 	imgPath: string;
-	duration: string;
+	duration: number;
 	genre: any;
 	language: string;
 	mpaaRating: any;

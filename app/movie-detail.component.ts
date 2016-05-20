@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouteParams } from '@angular/router-deprecated';
+import { Router, RouteParams } from '@angular/router-deprecated';
 import { Movie } from './movie';
 import { MovieService } from './movie.service';
 
@@ -12,8 +12,9 @@ export class MovieDetailComponent implements OnInit {
 	movie: Movie;
 
 	constructor(
-	  private movieService: MovieService,
-	  private routeParams: RouteParams) {
+		private router: Router,
+		private movieService: MovieService,
+		private routeParams: RouteParams) {
 	}
 
 	ngOnInit() {
@@ -23,6 +24,12 @@ export class MovieDetailComponent implements OnInit {
 	}
 
 	goBack() {
-		window.history.back();
+		let link = ['LanguageGrid', { language: '' }];
+    	this.router.navigate(link);
+	}
+
+	editMovieDetails(movie_id:number) {
+		let link = ['EditMovieDetail', { id: movie_id }];
+		this.router.navigate(link);
 	}
 }

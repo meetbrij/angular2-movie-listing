@@ -14,13 +14,14 @@
 			<h3>Details</h3>
       		<p>Genre: {{movie.genre}}</p>
       		<p>Language: {{movie.language}}</p>
-			<p>Duration: {{movie.duration}}</p>
+			<p>Duration: {{movie.duration}} minutes</p>
       		<p>User Rating: {{movie.userRating}}</p>
 			<hr>
 			<h3>Synopsis</h3>
 			<p>{{movie.description}}</p>
   			<hr>
-  			<button (click)="goBack()">Back</button>
+  			<button class="btn btn-default left movie-details" (click)="editMovieDetails(movie.id)">Edit Movie Details</button>
+  			<button class="btn btn-default left" (click)="goBack()">Back</button>
 		</div>
 	</div>
 </div>

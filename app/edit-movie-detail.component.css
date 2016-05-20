@@ -1,0 +1,11 @@
+.form-control, .alert {
+	width: 60%;
+}
+
+.ng-valid[required] {
+
+}
+
+.ng-invalid {
+  border: 1px solid #a94442; /* red */
+}

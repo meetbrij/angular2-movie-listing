@@ -2,6 +2,7 @@ import { Component, Input }       from '@angular/core';
 import { MovieService }     from './movie.service';
 import { GridViewComponent } from './grid-view.component';
 import { MovieDetailComponent } from './movie-detail.component';
+import { EditMovieDetailComponent } from './edit-movie-detail.component';
 import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 @RouteConfig([
@@ -25,6 +26,11 @@ import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angul
     path: '/detail/:id',
     name: 'MovieDetail',
     component: MovieDetailComponent
+  },
+  {
+    path: '/edit/:id',
+    name: 'EditMovieDetail',
+    component: EditMovieDetailComponent
   }
 ])
 
